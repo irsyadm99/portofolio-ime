@@ -41,9 +41,6 @@ function Header() {
             Computer Science Undergraduate From IPB University, Software
             Engineer enthusiasm especially at Frontend
           </Text>
-          <Button mt={8} colorScheme="blue">
-            Hire Me
-          </Button>
         </Box>
         <Circle
           // position="absolute"

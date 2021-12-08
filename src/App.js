@@ -24,26 +24,9 @@ function App() {
         </Heading>
         <Spacer></Spacer>
         <Box>
-          <IconButton
-            size="lg"
-            icon={<FaLinkedin />}
-            isRound="true"
-            onClick={toggleColorMode}
-          />
-          <IconButton
-            size="lg"
-            ml={2}
-            icon={<FaInstagram />}
-            isRound="true"
-            onClick={toggleColorMode}
-          />
-          <IconButton
-            size="lg"
-            ml={2}
-            icon={<FaGithub />}
-            isRound="true"
-            onClick={toggleColorMode}
-          />
+          <IconButton size="lg" icon={<FaLinkedin />} isRound="true" />
+          <IconButton size="lg" ml={2} icon={<FaInstagram />} isRound="true" />
+          <IconButton size="lg" ml={2} icon={<FaGithub />} isRound="true" />
           <IconButton
             size="lg"
             ml={8}
