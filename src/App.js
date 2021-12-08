@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, VStack } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
+import { Flex, Heading, Spacer } from "@chakra-ui/layout";
+import { IconButton } from "@chakra-ui/button";
+import {
+  FaSun,
+  FaMoon,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+import Header from "./components/Header";
+import Social from "./components/Social";
+import Profile from "./components/Profile";
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "light";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VStack p={5}>
+      <Flex w="100%">
+        <Heading ml="8" size="lg" fontWeight="semibold" color="cyan.400">
+          MyPortofolio
+        </Heading>
+        <Spacer></Spacer>
+        <Box>
+          <IconButton
+            size="lg"
+            icon={<FaLinkedin />}
+            isRound="true"
+            onClick={toggleColorMode}
+          />
+          <IconButton
+            size="lg"
+            ml={2}
+            icon={<FaInstagram />}
+            isRound="true"
+            onClick={toggleColorMode}
+          />
+          <IconButton
+            size="lg"
+            ml={2}
+            icon={<FaGithub />}
+            isRound="true"
+            onClick={toggleColorMode}
+          />
+          <IconButton
+            size="lg"
+            ml={8}
+            icon={isDark ? <FaSun /> : <FaMoon />}
+            isRound="true"
+            onClick={toggleColorMode}
+          />
+        </Box>
+      </Flex>
+      <Header />
+      <Social />
+      <Profile />
+    </VStack>
   );
 }
 
